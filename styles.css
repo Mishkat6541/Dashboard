@@ -29,12 +29,43 @@ html, body {
 
 }
 
-.btn1{
-    width: auto; 
-    align-self: flex-start; /
+h1{
+    color: white;
+    align-self: center;
+    cursor: pointer;
+}
+
+.btn1 {
+    background-color: #ff7f50; /* A nice coral color */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Padding for space inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn1:hover {
+    background-color: #ff6347; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn1:active{
+    background-color: #ff4500; /* Even darker shade when pressed */
+    transform: translateY(0); /* Reset lift when active */
 }
 
 .main{
     grid-area: 2/4/-1/-1;
     background-color: azure;
+}
+
+hr{
+    border: none; /* Remove the default border */
+    border-top: 3px solid white; /* Add a solid line */
+    margin: 20px 0; /* Space around the line */
+    width: 100%; /* Make it span the full width of its container */
+
 }
