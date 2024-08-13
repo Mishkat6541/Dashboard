@@ -69,3 +69,42 @@ hr{
     width: 100%; /* Make it span the full width of its container */
 
 }
+
+/* Container for the search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Style for the input field */
+.search-bar {
+    width: 300px; /* Width of the search bar */
+    padding: 10px 20px; /* Padding inside the search bar */
+    border: 2px solid #ccc; /* Border around the search bar */
+    border-radius: 20px 0 0 20px; /* Rounded corners (left side) */
+    outline: none; /* Remove default outline on focus */
+    font-size: 16px; /* Font size inside the search bar */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Style for the search button */
+.search-button {
+    padding: 10px 20px; /* Padding for the button */
+    border: 2px solid #ccc; /* Border matching the search bar */
+    border-radius: 0 20px 20px 0; /* Rounded corners (right side) */
+    background-color: #f1f1f1; /* Background color of the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effects for the search bar and button */
+.search-bar:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.search-button:hover {
+    background-color: #e9e9e9; /* Change background color on hover */
+}
