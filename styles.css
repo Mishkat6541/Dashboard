@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+
+.header{
+    grid-area: 1/4/1/-1;
+    background-color: rgb(241, 210, 141);
+
+}
+
+.sidebar{
+
+    grid-area: 1/1/-1/4;
+    background-color: orange;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+}
+
+.btn1{
+    width: auto; 
+    align-self: flex-start; /
+}
+
+.main{
+    grid-area: 2/4/-1/-1;
+    background-color: azure;
+}
