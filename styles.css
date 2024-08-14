@@ -58,8 +58,38 @@ h1{
 }
 
 .main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    height: 100vh;
+    width: 100vw;
+    background-color: palevioletred;
     grid-area: 2/4/-1/-1;
-    background-color: azure;
+}
+
+.feed{
+    display: flex;
+    gap: 50px;
+    grid-area: 1/1/-1/13;
+    background-color: white;
+    overflow:visible;
+    flex-wrap: wrap;
+
+}
+
+.note{
+    height: 200px;
+    width: 200px;
+    background-color: #ff7f50;
+    
+
+}
+
+.news{
+    display: flex;
+    grid-area: 1/13/-1/-1;
+    background-color: white
+
 }
 
 hr{
