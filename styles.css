@@ -1,140 +1,139 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 250px 1fr;
     height: 100vh;
-    width: 100vw;
-    background-color: aqua;
 }
 
-
-.header{
-    grid-area: 1/4/1/-1;
-    background-color: rgb(241, 210, 141);
-
-}
-
-.sidebar{
-
-    grid-area: 1/1/-1/4;
-    background-color: orange;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-
-}
-
-h1{
+.header {
+    grid-column: 1 / -1;
+    background-color: #292b2c;
     color: white;
-    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+    background-color: #007bff;
+    color: white;
     cursor: pointer;
 }
 
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.user-info {
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #495057;
+}
+
 .btn1 {
-    background-color: #ff7f50; /* A nice coral color */
-    color: white; /* White text for contrast */
-    padding: 10px 20px; /* Padding for space inside the button */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Increase font size */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: left;
 }
 
 .btn1:hover {
-    background-color: #ff6347; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background-color: #0056b3;
 }
 
-.btn1:active{
-    background-color: #ff4500; /* Even darker shade when pressed */
-    transform: translateY(0); /* Reset lift when active */
-}
-
-.main{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-    height: 100vh;
-    width: 100vw;
-    background-color: palevioletred;
-    grid-area: 2/4/-1/-1;
-}
-
-.feed{
-    display: flex;
-    gap: 50px;
-    grid-area: 1/1/-1/13;
+.main {
+    padding: 20px;
     background-color: white;
-    overflow:visible;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
 }
 
-.note{
-    height: 200px;
-    width: 200px;
-    background-color: #ff7f50;
-    
-
+.feed, .news {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.news{
-    display: flex;
-    grid-area: 1/13/-1/-1;
-    background-color: white
-
+h2 {
+    margin-top: 0;
 }
 
-hr{
-    border: none; /* Remove the default border */
-    border-top: 3px solid white; /* Add a solid line */
-    margin: 20px 0; /* Space around the line */
-    width: 100%; /* Make it span the full width of its container */
-
+.note {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Container for the search bar */
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+.note h3 {
+    margin-top: 0;
+    color: #007bff;
 }
 
-/* Style for the input field */
-.search-bar {
-    width: 300px; /* Width of the search bar */
-    padding: 10px 20px; /* Padding inside the search bar */
-    border: 2px solid #ccc; /* Border around the search bar */
-    border-radius: 20px 0 0 20px; /* Rounded corners (left side) */
-    outline: none; /* Remove default outline on focus */
-    font-size: 16px; /* Font size inside the search bar */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-}
-
-/* Style for the search button */
-.search-button {
-    padding: 10px 20px; /* Padding for the button */
-    border: 2px solid #ccc; /* Border matching the search bar */
-    border-radius: 0 20px 20px 0; /* Rounded corners (right side) */
-    background-color: #f1f1f1; /* Background color of the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-/* Hover effects for the search bar and button */
-.search-bar:focus {
-    border-color: #007bff; /* Change border color on focus */
-}
-
-.search-button:hover {
-    background-color: #e9e9e9; /* Change background color on hover */
+.note p {
+    margin: 5px 0 0;
+    font-size: 14px;
 }
